@@ -1,0 +1,116 @@
+.services-section {
+  background-color: var(--bg-dark);
+  padding: 60px 20px;
+
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.8rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text-light);
+}
+
+.service-card {
+  background-color: var(--surface-dark);
+  border-radius: 16px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(158, 255, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.service-card:hover {
+  box-shadow: rgba(80, 184, 25, 0.25) 0px 14px 28px,
+    rgba(135, 134, 134, 0.22) 0px 10px 30px;
+}
+
+.service-icon {
+  font-size: 40px;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.services-heading {
+  background-image: url("../../public/images/services-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.services-heading-content {
+  padding: 100px 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 900px;
+}
+
+.services-heading-title {
+  font-size: 3rem;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.services-description {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.8rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-icon {
+    font-size: 35px;
+  }
+}
+h3 {
+  color: var(--text-light);
+}
+p {
+  color: var(--text-muted);
+}
+.learn-more-text {
+  margin-top: 10px;
+  display: block;
+  color: var(--secondary);
+  font-weight: 500;
+  text-align: right;
+  transition: all 0.3 ease;
+}
+.service-card {
+  cursor: pointer;
+}
+.service-card:hover .learn-more-text {
+  color: #c4ff00;
+  transform: translateX(4px);
+}

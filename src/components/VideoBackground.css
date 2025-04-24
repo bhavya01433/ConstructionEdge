@@ -1,0 +1,109 @@
+/*fullscreen container*/
+.video-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+/*Background Video*/
+.video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/*Overlay Container*/
+.video-overlay {
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  /* padding-top: 30vh; */
+  background-color: rgba(0, 0, 0, 0.55);
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+}
+/* Centered content inside overlay */
+.overlay-content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+  max-width: 90;
+  margin: 0 auto;
+}
+/* Big title */
+.overlay-content h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+/* Subtitle */
+.overlay-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+/* CTA Button */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  background-color: var(--secondary);
+  color: var(--bg-dark);
+  padding: 14px 32px;
+  font-size: 1.2 rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+
+.cta-btn:hover {
+  background-color: #ababb8;
+  color: #000;
+  box-shadow: 0 4px 15px #ababb8;
+}
+/* Smooth fade-in animation*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .overlay-content h1 {
+    font-size: 2.5rem;
+  }
+  .overlay-content p {
+    font-size: 1.2rem;
+  }
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+@media screen and (max-width: 480px) {
+  .overlay-content h1 {
+    font-size: 2rem;
+  }
+}
