@@ -5,7 +5,7 @@ function About() {
   return (
     <section className="about-section" id="about">
       <div className="about-content">
-        <h2 class="about-title">Who We Are</h2>
+        <h2 class="about-title">Who We Are!</h2>
         <p class="about-text">
           At <strong>ConstructEdge</strong>, we don’t just build structures — we
           build legacies. With over <strong>15 years</strong> of hands-on

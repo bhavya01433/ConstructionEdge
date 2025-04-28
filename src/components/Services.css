@@ -104,7 +104,7 @@ p {
   display: block;
   color: var(--secondary);
   font-weight: 500;
-  text-align: right;
+  text-align: center;
   transition: all 0.3 ease;
 }
 .service-card {

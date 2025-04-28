@@ -1,10 +1,10 @@
-:root {
+/* :root {
   --primary: #121212;
   --secondary: #cfff4d;
   --accent: #1f1f1f;
   --text-light: rgba(255, 255, 255, 0.92);
   --text-muted: rgba(255, 255, 255, 0.7);
-}
+} */
 
 /* Wrapper */
 .service-detail-wrapper {
@@ -17,14 +17,14 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 600px;
   overflow: hidden;
 }
 .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.3);
+  filter: brightness(0.4);
 }
 .banner-overlay {
   position: absolute;
@@ -131,7 +131,7 @@
 }
 .gallery-grid img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -183,4 +183,22 @@
   .cta-section h2 {
     font-size: 1.6rem;
   }
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-caption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }

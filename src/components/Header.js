@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -15,9 +16,9 @@ const Header = () => {
       </div>
 
       <div className={`nav ${menuOpen ? "active" : ""}`}>
-        <a href="#home" onClick={toggleMenu}>
+        <Link to="/" onClick={toggleMenu}>
           Home
-        </a>
+        </Link>
         <a href="#about" onClick={toggleMenu}>
           About
         </a>

@@ -12,9 +12,11 @@ const VideoBackground = () => {
         <div className="overlay-content">
           <h1>Building Dreams, One Brick at a Time</h1>
           <p>Construct Edge - Elevating Excellence in Construction</p>
-          <div className="cta-buttons">
-            <button className="cta-btn">Start Building With Us</button>
-            <button className="cta-btn secondary">Explore Our Projects</button>
+          <div className="hero-cta-buttons">
+            <button className="hero-cta-btn">Start Building With Us</button>
+            <button className="hero-cta-btn secondary">
+              Explore Our Projects
+            </button>
           </div>
         </div>
       </div>

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ServiceDetail.css";
 
 const Architectural = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <section className="service-detail-wrapper">
       {/* Hero Banner */}
@@ -81,13 +84,32 @@ const Architectural = () => {
         <section className="gallery-section">
           <h2>Visualize the Possibilities</h2>
           <div className="gallery-grid">
-            <img src="/images/arch1.jpeg" alt="Design 1" />
-            <img src="/images/arch2.jpeg" alt="Design 2" />
-            <img src="/images/arch3.jpeg" alt="Design 3" />
-            <img src="/images/arch4.jpeg" alt="Design 4" />
+            <div className="gallery-item">
+              <img src="/images/arch1.jpeg" alt="Design 1" />
+              <p className="image-caption">
+                Modern residential masterpiece blending elegance and function.
+              </p>
+            </div>
+            <div className="gallery-item">
+              <img src="/images/arch2.jpeg" alt="Design 2" />
+              <p className="image-caption">
+                Striking 3D architectural rendering bringing ideas to life.
+              </p>
+            </div>
+            <div className="gallery-item">
+              <img src="/images/arch3.jpeg" alt="Design 3" />
+              <p className="image-caption">
+                Sustainable urban development with cutting-edge planning.
+              </p>
+            </div>
+            <div className="gallery-item">
+              <img src="/images/arch4.jpeg" alt="Design 4" />
+              <p className="image-caption">
+                Commercial space designed for innovation and community.
+              </p>
+            </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="cta-section">
           <h2>Ready to Build the Future?</h2>
