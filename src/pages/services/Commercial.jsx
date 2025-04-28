@@ -92,7 +92,7 @@ const Commercial = () => {
               </p>
             </div>
             <div className="gallery-item">
-              <img src="/images/comm2.jpg" alt="Retail Store Construction" />
+              <img src="/images/com2.jpg" alt="Retail Store Construction" />
               <p className="image-caption">
                 Stylish retail store interiors that attract customers.
               </p>
