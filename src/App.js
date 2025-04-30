@@ -1,9 +1,10 @@
-import React from "react";
+// import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import VideoBackground from "./components/videoBackground";
 import Header from "./components/Header";
 import About from "./components/About";
 import Services from "./components/Services";
+import Portfolio from "./components/portfolio/Portfolio";
 
 // Service Detail Pages
 import Architectural from "./pages/services/Architectural";
@@ -25,9 +26,9 @@ function App() {
           element={
             <>
               <VideoBackground />
-
               <About />
               <Services />
+              <Portfolio />
             </>
           }
         />

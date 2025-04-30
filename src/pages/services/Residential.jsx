@@ -14,7 +14,7 @@ const Residential = () => {
       {/* Hero section */}
       <div className="hero-banner">
         <img
-          src="/images/residential-hero.jpg" // Update with the correct image path
+          src="/images/residential-hero.jpg"
           alt="Residential Construction"
           className="banner-img"
         />
@@ -81,15 +81,7 @@ const Residential = () => {
         </section>
 
         {/* Gallery Section */}
-        {/* <section className="gallery-section">
-          <h2>Our Residential Projects</h2>
-          <div className="gallery-grid">
-            <img src="/images/resi1.jpg" alt="Residential Project 1" />
-            <img src="/images/resi2.jpg" alt="Residential Project 2" />
-            <img src="/images/resi3.jpg" alt="Residential Project 3" />
-            <img src="/images/resi4.jpg" alt="Residential Project 4" />
-          </div>
-        </section> */}
+
         <section className="gallery-section">
           <h2>Our Residential Projects</h2>
           <div className="gallery-grid">

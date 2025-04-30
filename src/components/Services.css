@@ -1,32 +1,58 @@
 .services-section {
   background-color: var(--bg-dark);
   padding: 60px 20px;
-
   font-family: "Segoe UI", sans-serif;
   text-align: center;
 }
 
-.services-title {
-  font-size: 2.8rem;
-  color: var(--secondary);
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
+/* Global heading and paragraph styling inside services */
+.services-section h3 {
+  color: var(--text-light);
+}
+.services-section p {
+  color: var(--text-muted);
 }
 
+/* Heading Content */
+.services-heading-content {
+  padding: 100px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.services-heading-title {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.services-description {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  color: var(--text-light);
 }
 
+/* Service Card */
 .service-card {
   background-color: var(--surface-dark);
   border-radius: 16px;
   padding: 40px 25px;
   text-align: center;
+  color: var(--text-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 20px rgba(158, 255, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -35,16 +61,34 @@
 }
 
 .service-card:hover {
+  transform: translateY(-4px);
   box-shadow: rgba(80, 184, 25, 0.25) 0px 14px 28px,
     rgba(135, 134, 134, 0.22) 0px 10px 30px;
 }
 
+/* Icon inside Card */
 .service-icon {
   font-size: 40px;
   color: var(--secondary);
   margin-bottom: 20px;
 }
 
+/* "Learn More" Text */
+.learn-more-text {
+  margin-top: 10px;
+  display: block;
+  color: var(--secondary);
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .learn-more-text {
+  color: #c4ff00;
+  transform: translateX(4px);
+}
+
+/* Services Heading Image */
 .services-heading {
   background-image: url("../../public/images/services-bg.jpeg");
   background-size: cover;
@@ -56,32 +100,9 @@
   margin-bottom: 120px;
 }
 
-.services-heading-content {
-  padding: 100px 20px;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 900px;
-}
-
-.services-heading-title {
-  font-size: 3rem;
-  color: var(--secondary);
-  letter-spacing: 1.5px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.services-description {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  font-size: 1.8rem;
-  color: var(--text-light);
-  opacity: 0.9;
-}
-/* Responsive tweaks */
+/* Responsive Tweaks */
 @media (max-width: 600px) {
-  .services-title {
+  .services-heading-title {
     font-size: 2rem;
   }
 
@@ -92,25 +113,4 @@
   .service-icon {
     font-size: 35px;
   }
-}
-h3 {
-  color: var(--text-light);
-}
-p {
-  color: var(--text-muted);
-}
-.learn-more-text {
-  margin-top: 10px;
-  display: block;
-  color: var(--secondary);
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.3 ease;
-}
-.service-card {
-  cursor: pointer;
-}
-.service-card:hover .learn-more-text {
-  color: #c4ff00;
-  transform: translateX(4px);
 }

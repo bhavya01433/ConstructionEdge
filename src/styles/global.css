@@ -1,11 +1,9 @@
 :root {
-  /* --bg-dark: #262626; */
   --bg-dark: #0b0b0b;
   --surface-dark: #1e1e1e;
   --primary: #f0b429;
   --secondary: #9eff00;
   --accent: #ffffff;
-  /* --accent: #e6e6e6; */
 
   --text-light: #e6e6e6;
   --text-muted: #aaaaaa;
