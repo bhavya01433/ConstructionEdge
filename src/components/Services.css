@@ -20,7 +20,6 @@
   max-width: 900px;
   margin: 0 auto;
 }
-
 .services-heading-title {
   font-size: 2.5rem;
   color: var(--secondary);
@@ -64,13 +63,6 @@
   transform: translateY(-4px);
   box-shadow: rgba(80, 184, 25, 0.25) 0px 14px 28px,
     rgba(135, 134, 134, 0.22) 0px 10px 30px;
-}
-
-/* Icon inside Card */
-.service-icon {
-  font-size: 40px;
-  color: var(--secondary);
-  margin-bottom: 20px;
 }
 
 /* "Learn More" Text */

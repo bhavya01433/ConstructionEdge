@@ -194,3 +194,8 @@
   color: #666;
   text-align: center;
 }
+.cta-section {
+  min-height: 300px; /* or any value that suits your design */
+  background-size: cover;
+  background-position: center;
+}

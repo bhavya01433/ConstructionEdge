@@ -28,7 +28,7 @@ const Portfolio = () => {
       {/* Featured Project */}
       <div className="featured-project">
         <img
-          src="images/skyline-hero.jpg"
+          src="images/b.jpg"
           alt="featured project"
           className="featured-image"
         />

@@ -104,7 +104,17 @@ const Renovation = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
+        <section
+          className="cta-section"
+          style={{
+            backgroundImage: "url('/images/sdp.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            padding: "100px 20px",
+            color: "#fff",
+          }}
+        >
           <h2>Let’s Redefine Your Space</h2>
           <p>Schedule a consultation and start your transformation today.</p>
           <button className="cta-btn">Book a Free Assessment</button>

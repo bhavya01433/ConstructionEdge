@@ -109,13 +109,25 @@ const ProjectManagement = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
-          <h2>Ready to Get Started on Your Project?</h2>
-          <p>
-            Let us handle the details so you can focus on your vision. Reach out
-            for a consultation today!
-          </p>
-          <button className="cta-btn">Request a Free Consultation</button>
+        <section
+          className="cta-section"
+          style={{
+            backgroundImage: "url('/images/sdp.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            padding: "100px 20px",
+            color: "#fff",
+          }}
+        >
+          <div className="cta-overlay">
+            <h2>Ready to Get Started on Your Project?</h2>
+            <p>
+              Let us handle the details so you can focus on your vision. Reach
+              out for a consultation today!
+            </p>
+            <button className="cta-btn">Request a Free Consultation</button>
+          </div>
         </section>
       </div>
     </section>

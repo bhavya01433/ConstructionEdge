@@ -1,5 +1,6 @@
-// import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import VideoBackground from "./components/videoBackground";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -15,25 +16,35 @@ import Renovation from "./pages/services/Renovation";
 import Residential from "./pages/services/Residential";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Router>
       <Header />
 
       <Routes>
-        {/* Home Route */}
+        {/* Home Page */}
         <Route
           path="/"
           element={
             <>
               <VideoBackground />
-              <About />
-              <Services />
-              <Portfolio />
+              <section id="about">
+                <About />
+              </section>
+              <section id="services">
+                <Services />
+              </section>
+              <section id="portfolio">
+                <Portfolio />
+              </section>
             </>
           }
         />
 
-        {/* Services Detail Routes */}
+        {/* Services Detail Pages */}
         <Route path="/services/architecture" element={<Architectural />} />
         <Route path="/services/commercial" element={<Commercial />} />
         <Route path="/services/interior" element={<Interior />} />

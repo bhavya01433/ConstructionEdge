@@ -111,7 +111,17 @@ const Architectural = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="cta-section">
+        <section
+          className="cta-section"
+          style={{
+            backgroundImage: "url('/images/sdp.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            padding: "100px 20px",
+            color: "#fff",
+          }}
+        >
           <h2>Ready to Build the Future?</h2>
           <p>Let’s turn your vision into an actionable architectural plan.</p>
           <button className="cta-btn">Request a Free Consultation</button>

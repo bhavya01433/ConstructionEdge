@@ -2,6 +2,13 @@ import React from "react";
 import "./VideoBackground.css";
 
 const VideoBackground = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="video-container">
       <video autoPlay loop muted playsInline className="video-bg">
@@ -13,8 +20,19 @@ const VideoBackground = () => {
           <h1>Building Dreams, One Brick at a Time</h1>
           <p>Construct Edge - Elevating Excellence in Construction</p>
           <div className="hero-cta-buttons">
-            <button className="hero-cta-btn">Start Building With Us</button>
-            <button className="hero-cta-btn secondary">
+            {/* Start Building With Us button */}
+            <button
+              className="hero-cta-btn"
+              onClick={() => scrollToSection("services")}
+            >
+              Start Building With Us
+            </button>
+
+            {/* Explore Our Projects button */}
+            <button
+              className="hero-cta-btn secondary"
+              onClick={() => scrollToSection("portfolio")}
+            >
               Explore Our Projects
             </button>
           </div>

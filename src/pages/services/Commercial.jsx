@@ -113,7 +113,17 @@ const Commercial = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="cta-section">
+        <section
+          className="cta-section"
+          style={{
+            backgroundImage: "url('/images/sdp.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            padding: "100px 20px",
+            color: "#fff",
+          }}
+        >
           <h2>Ready to Start Your Commercial Project?</h2>
           <p>
             Let’s bring your business vision to life with our expertise in
