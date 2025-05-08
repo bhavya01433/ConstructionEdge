@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import FeaturedProject from "../portfolio/FeaturedProject";
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -25,19 +26,7 @@ const Portfolio = () => {
     <section className="portfolio-section">
       <h2 className="portfolio-title">Our Featured Projects</h2>
 
-      {/* Featured Project */}
-      <div className="featured-project">
-        <img
-          src="images/b.jpg"
-          alt="featured project"
-          className="featured-image"
-        />
-        <div className="featured-overlay">
-          <h3>Skyline Towers</h3>
-          <p>Commercial Marvel in the Heart of the City</p>
-          <button className="view-btn">View Details</button>
-        </div>
-      </div>
+      <FeaturedProject />
 
       {/* Horizontal Scroll Project Showcase */}
       <div id="scrollContainer" className="horizontal-scroll-container">

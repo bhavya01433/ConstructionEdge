@@ -82,7 +82,9 @@
 
 /* Services Heading Image */
 .services-heading {
-  background-image: url("../../public/images/services-bg.jpeg");
+  /* background-image: url("../../public/images/services-bg.jpeg"); */
+
+  /* background-image: url("/images/services-bg.jpeg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

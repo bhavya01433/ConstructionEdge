@@ -27,6 +27,7 @@
   height: 100vh;
   width: 100%;
   justify-content: center;
+  text-shadow: 1px 1px 4px #000;
 }
 /* Centered content inside overlay */
 .overlay-content {
@@ -34,7 +35,7 @@
   color: #fff;
   padding: 20px;
   animation: fadeIn 2s ease-in-out;
-  max-width: 90;
+  max-width: 90%;
   margin: 0 auto;
 }
 /* Big title */
@@ -62,12 +63,12 @@
   background-color: var(--secondary);
   color: var(--bg-dark);
   padding: 14px 32px;
-  font-size: 1.2 rem;
+  font-size: 1.2rem;
   font-weight: 600;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero-cta-btn:hover {
@@ -93,7 +94,7 @@
   .overlay-content p {
     font-size: 1.2rem;
   }
-  .cta-btn {
+  .hero-cta-btn {
     padding: 12px 24px;
     font-size: 1rem;
   }

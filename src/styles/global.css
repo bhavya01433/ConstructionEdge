@@ -22,4 +22,7 @@
 body {
   background-color: #ffffff;
   color: #333;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  line-height: 1.6;
 }

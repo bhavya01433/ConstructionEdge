@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Header.css";
 
 const Header = () => {
@@ -24,19 +24,19 @@ const Header = () => {
           Home
         </Link>
 
-        <Link to="/#about" onClick={toggleMenu}>
+        <Link to="/#about" smooth onClick={toggleMenu}>
           About
         </Link>
 
-        <Link to="/#services" onClick={toggleMenu}>
+        <Link to="/#services" smooth onClick={toggleMenu}>
           Services
         </Link>
 
-        <Link to="/#portfolio" onClick={toggleMenu}>
+        <Link to="/#portfolio" smooth onClick={toggleMenu}>
           Portfolio
         </Link>
 
-        <Link to="/#testimonials" onClick={toggleMenu}>
+        <Link to="/#testimonials" smooth onClick={toggleMenu}>
           Testimonials
         </Link>
 

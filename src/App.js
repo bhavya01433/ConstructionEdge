@@ -1,11 +1,14 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import VideoBackground from "./components/videoBackground";
-import Header from "./components/Header";
-import About from "./components/About";
-import Services from "./components/Services";
-import Portfolio from "./components/portfolio/Portfolio";
+// Common components
+import Header from "./components/common/Header";
+import VideoBackground from "./components/common/VideoBackground";
+
+// Home sections
+import About from "./components/home/About";
+import Services from "./components/home/Services";
+import Portfolio from "./components/home/Portfolio";
 
 // Service Detail Pages
 import Architectural from "./pages/services/Architectural";
@@ -14,6 +17,9 @@ import Interior from "./pages/services/Interior";
 import Project from "./pages/services/Project";
 import Renovation from "./pages/services/Renovation";
 import Residential from "./pages/services/Residential";
+
+// Portfolio Detail Pages
+import Skyline from "./pages/portfolio/Skyline";
 
 function App() {
   useEffect(() => {
@@ -51,6 +57,9 @@ function App() {
         <Route path="/services/project" element={<Project />} />
         <Route path="/services/renovation" element={<Renovation />} />
         <Route path="/services/residential" element={<Residential />} />
+
+        {/* Portfolio Detail Pages */}
+        <Route path="/portfolio/skyline" element={<Skyline />} />
       </Routes>
     </Router>
   );
