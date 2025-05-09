@@ -13,7 +13,7 @@
 .project-image {
   flex: 1 1 60%;
   min-width: 300px;
-  overflow: hidden; /* allow image to scale inside the box */
+  overflow: hidden;
 }
 
 .project-image img {
@@ -24,7 +24,7 @@
   transition: transform 0.3s ease;
 }
 
-/* ✅ Hover effect (desktop + mobile) */
+/*  Hover effect */
 .project-image:hover img {
   transform: scale(1.03);
 }
@@ -44,7 +44,7 @@
 
 .tagline {
   font-size: 1.2rem;
-  color: #f0c040;
+  color: var(--secondary);
   margin-bottom: 1rem;
 }
 
@@ -79,7 +79,7 @@
   background-color: #e0a800;
 }
 
-/* ✅ Responsive design */
+/*  Responsive design */
 @media (max-width: 768px) {
   .featured-project {
     flex-direction: column;

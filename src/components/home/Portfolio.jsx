@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import FeaturedProject from "../portfolio/FeaturedProject";
+import { Link } from "react-router-dom";
+import portfolioData from "../../data/portfolioData"; // ✅ Import the project data
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -30,54 +32,15 @@ const Portfolio = () => {
 
       {/* Horizontal Scroll Project Showcase */}
       <div id="scrollContainer" className="horizontal-scroll-container">
-        {[
-          {
-            title: "Eden Residence",
-            type: "Luxury Living",
-            img: "images/eden.jpg",
-          },
-          {
-            title: "Apex Industrial Park",
-            type: "Smart Industrial Zone",
-            img: "images/apex.jpg",
-          },
-          {
-            title: "Nova Offices",
-            type: "Modern Workspace",
-            img: "images/nova.jpg",
-          },
-          {
-            title: "Horizon Villas",
-            type: "Premium Residentials",
-            img: "images/premium.jpg",
-          },
-          {
-            title: "Temple Restoration",
-            type: "Historic Preservation",
-            img: "images/temple.jpg",
-          },
-          {
-            title: "GreenTech Towers",
-            type: "Eco-friendly Skyscraper",
-            img: "images/greentech.jpg",
-          },
-          {
-            title: "Mercy Hospital",
-            type: "Public Service Building",
-            img: "images/hospital.jpg",
-          },
-          {
-            title: "The Palm Groove",
-            type: "Dream home",
-            img: "images/grove.jpg",
-          },
-        ].map((project, index) => (
+        {portfolioData.map((project, index) => (
           <div className="scroll-card" key={index}>
             <img src={project.img} alt={project.title} />
             <div className="card-overlay">
               <h4>{project.title}</h4>
               <p>{project.type}</p>
-              <button className="view-btn">View Details</button>
+              <Link to={`/portfolio/${project.slug}`}>
+                <button className="view-btn">View Details</button>
+              </Link>
             </div>
           </div>
         ))}
