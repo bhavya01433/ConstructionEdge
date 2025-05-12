@@ -12,39 +12,39 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: <Ruler size={40} color="#9eff00" />,
+    icon: <Ruler size={40} color="var(--secondary)" />,
     title: "Architecture & Planning",
     description:
       "Innovative blueprints and designs tailored to your space and goals.",
     link: "/services/architecture",
   },
   {
-    icon: <Hammer size={40} color="#9eff00" />,
+    icon: <Hammer size={40} color="var(--secondary)" />,
     title: "Renovation & Remodeling",
     description: "Transforming structures with modern, functional upgrades.",
     link: "/services/renovation",
   },
   {
-    icon: <LayoutTemplate size={40} color="#9eff00" />,
+    icon: <LayoutTemplate size={40} color="var(--secondary)" />,
     title: "Interior Designing",
     description:
       "Creating elegant, functional interiors that reflect your personality.",
     link: "/services/interior",
   },
   {
-    icon: <Home size={40} color="#9eff00" />,
+    icon: <Home size={40} color="var(--secondary)" />,
     title: "Residential Construction",
     description: "Building beautiful, lasting homes from foundation to finish.",
     link: "/services/residential",
   },
   {
-    icon: <Building2 size={40} color="#9eff00" />,
+    icon: <Building2 size={40} color="var(--secondary)" />,
     title: "Commercial Construction",
     description: "Constructing modern workspaces and commercial structures.",
     link: "/services/commercial",
   },
   {
-    icon: <ClipboardList size={40} color="#9eff00" />,
+    icon: <ClipboardList size={40} color="var(--secondary)" />,
     title: "Project Management",
     description:
       "Streamlining timelines and budgets for efficient project delivery.",

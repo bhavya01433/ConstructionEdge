@@ -222,8 +222,8 @@ const portfolioData = [
     slug: "greentech-towers",
     type: "Eco-friendly Skyscraper",
     img: "images/greentech.jpg",
-    overviewImg: "images/greentech2.jpeg",
-    highlightImg: "images/gallery3.jpeg",
+    overviewImg: "images/gallery1.jpeg",
+    highlightImg: "images/gallery2.jpeg",
     description:
       "GreenTech Towers blend innovation with sustainability, offering energy-efficient residential and office spaces. Rising tall in the heart of the city, this green marvel harnesses renewable energy and sets new standards in sustainable design.",
     highlights: [

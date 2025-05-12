@@ -238,7 +238,7 @@ const servicesData = [
 
   // Project Management
   {
-    slug: "project",
+    slug: "project-management",
     title: "Project Management",
     subtitle:
       "Efficiently bringing your vision to life, every step of the way.",
@@ -296,6 +296,8 @@ const servicesData = [
       backgroundImage: "/images/sdp.jpg",
     },
   },
+
+  // Residential Construction
   {
     slug: "residential",
     title: "Residential Construction",
