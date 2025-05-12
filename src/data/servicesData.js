@@ -3,7 +3,7 @@ const servicesData = [
   {
     slug: "architecture",
     title: "Architecture & Planning",
-    bannerImg: "/images/carpenter.jpeg",
+    bannerImg: "/images/Carpenter.jpeg",
     description:
       "Turning visions into blueprints, and blueprints into reality.",
     introHeading: "Design That Speaks Purpose",
@@ -238,7 +238,7 @@ const servicesData = [
 
   // Project Management
   {
-    slug: "project-management",
+    slug: "project",
     title: "Project Management",
     subtitle:
       "Efficiently bringing your vision to life, every step of the way.",
