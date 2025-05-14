@@ -5,7 +5,6 @@
   text-align: center;
 }
 
-/* Global heading and paragraph styling inside services */
 .services-section h3 {
   color: var(--text-light);
 }
@@ -53,7 +52,7 @@
   text-align: center;
   color: var(--text-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(158, 255, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(227, 242, 19, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   text-decoration: none;
@@ -61,8 +60,8 @@
 
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: rgba(80, 184, 25, 0.25) 0px 14px 28px,
-    rgba(135, 134, 134, 0.22) 0px 10px 30px;
+  box-shadow: rgba(247, 247, 45, 0.387) 0px 14px 18px,
+    rgba(135, 134, 134, 0.22) 0px 10px 10px;
 }
 
 /* "Learn More" Text */
@@ -83,14 +82,14 @@
 /* Services Heading Image */
 .services-heading {
   background-image: url("/public/oyu.jpeg ");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
+  margin-top: 40px;
 }
 
 /* Responsive Tweaks */

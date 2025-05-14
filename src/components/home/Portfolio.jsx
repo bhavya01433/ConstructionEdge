@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import FeaturedProject from "../portfolio/FeaturedProject";
 import { Link } from "react-router-dom";
-import portfolioData from "../../data/portfolioData"; // ✅ Import the project data
+import portfolioData from "../../data/portfolioData"; // Import the project data
 import "./Portfolio.css";
 
 const Portfolio = () => {

@@ -29,7 +29,7 @@
   right: 5%;
   max-width: 600px;
   padding: 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent); */
   color: #ffffff;
   z-index: 2;
   border-radius: 0 0 12px 12px;
@@ -71,10 +71,7 @@
 .zigzag-text {
   flex: 1;
   min-width: 300px;
-  background-color: #1a1a1a;
   padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(0, 245, 212, 0.04);
 }
 
 .zigzag-text h2 {
@@ -102,7 +99,7 @@
   min-width: 100px;
   overflow: hidden;
   border-radius: 16px;
-  box-shadow: 0 0 10px rgba(207, 243, 5, 0.363);
+  box-shadow: 0 0 10px rgba(224, 249, 2, 0.627);
 }
 
 .zigzag-image img {

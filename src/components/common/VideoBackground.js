@@ -25,7 +25,7 @@ const VideoBackground = () => {
               className="hero-cta-btn"
               onClick={() => scrollToSection("services")}
             >
-              Start Building With Us
+              Let’s Build Something Great Together
             </button>
 
             {/* Explore Our Projects button */}
@@ -33,7 +33,7 @@ const VideoBackground = () => {
               className="hero-cta-btn secondary"
               onClick={() => scrollToSection("portfolio")}
             >
-              Explore Our Projects
+              See What We've Built
             </button>
           </div>
         </div>

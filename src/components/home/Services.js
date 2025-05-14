@@ -25,7 +25,7 @@ const services = [
     link: "/services/renovation",
   },
   {
-    icon: <LayoutTemplate size={40} color="var(--secondary)" />,
+    icon: <LayoutTemplate size={40} color="#ffd700" />,
     title: "Interior Designing",
     description:
       "Creating elegant, functional interiors that reflect your personality.",

@@ -1,8 +1,9 @@
 :root {
   --bg-dark: #0b0b0b;
   --surface-dark: #1e1e1e;
-  --primary: #f0b429;
-  --secondary: #9eff00;
+  --primary: #9eff00;
+  /* --secondary: #fcca00; */
+  --secondary: #ffd700;
   --accent: #ffffff;
 
   --text-light: #e6e6e6;
@@ -25,4 +26,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #222;
   line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
 }
