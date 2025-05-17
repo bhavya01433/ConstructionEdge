@@ -135,6 +135,7 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  row-gap: 50px;
 }
 
 .stat-card {
@@ -183,29 +184,6 @@
   opacity: 0.85;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.stat-img-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid #edfa64;
-}
-
-.stat-icon-overlay {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #edfa64;
-  padding: 6px;
-  border-radius: 8px;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 6px #edfa64;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -222,5 +200,41 @@
   }
   .about-section {
     background-attachment: scroll;
+  }
+  .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* === NEW FADE-IN WITH GLOW === */
+@keyframes fadeInUpGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    filter: blur(8px) brightness(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+.fade-in-up-glow {
+  opacity: 0;
+  animation: fadeInUpGlow 0.6s ease forwards;
+}
+
+/* STAT COUNT GLOW EFFECT */
+.glow-count {
+  animation: pulseGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 8px #ffd700, 0 0 2px #fff;
+  }
+  to {
+    text-shadow: 0 0 16px #fff200, 0 0 4px #fff;
   }
 }

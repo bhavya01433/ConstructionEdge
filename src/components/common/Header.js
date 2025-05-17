@@ -36,8 +36,8 @@ const Header = () => {
           Portfolio
         </Link>
 
-        <Link to="/#testimonials" smooth onClick={toggleMenu}>
-          Testimonials
+        <Link to="/#testimonial" smooth onClick={toggleMenu}>
+          Testimonial
         </Link>
 
         <button className="quote-btn">Request a Quote</button>
