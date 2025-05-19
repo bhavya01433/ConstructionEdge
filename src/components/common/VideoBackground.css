@@ -15,12 +15,11 @@
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  z-index: -1;
+  pointer-events: none;
 }
 /*Overlay Container*/
 .video-overlay {
   position: relative;
-  color: white;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.55);
@@ -28,6 +27,7 @@
   width: 100%;
   justify-content: center;
   text-shadow: 1px 1px 4px #000;
+  z-index: 1;
 }
 /* Centered content inside overlay */
 .overlay-content {
@@ -36,7 +36,6 @@
   padding: 0 20px;
   animation: fadeIn 2s ease-in-out;
   max-width: 90%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,10 +79,11 @@
 }
 
 .hero-cta-btn:hover {
-  background-color: #ababb8;
+  background-color: #d1d1e0;
   color: #000;
-  box-shadow: 0 4px 15px #ababb8;
+  box-shadow: 0 4px 15px #d1d1e0;
 }
+
 /* Smooth fade-in animation*/
 @keyframes fadeIn {
   from {

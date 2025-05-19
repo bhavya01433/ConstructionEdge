@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Outfit:wght@300;600&display=swap");
 
-/* === ABOUT SECTION === */
+/* About Section  */
 .about-section {
   background-image: url("/public/stats-bgg.jpeg");
   background-attachment: fixed;
@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darken for readability */
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 .about-content,
@@ -31,7 +31,7 @@
   z-index: 2;
 }
 
-/* === SECTION TITLE === */
+/* Section Title */
 .about-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -52,7 +52,7 @@
   display: block;
 }
 
-/* === DESCRIPTION === */
+/* Description  */
 .about-text {
   font-size: 1.4rem;
   line-height: 1.85;
@@ -69,7 +69,7 @@
   font-weight: 600;
 }
 
-/* === MISSION & VISION === */
+/*  MISSION & VISION  */
 .mission-vision-section {
   margin-bottom: 80px;
 }
@@ -198,6 +198,9 @@
   .stat-card {
     width: 90%;
   }
+  .stats-section {
+    padding: 40px 5vw;
+  }
   .about-section {
     background-attachment: scroll;
   }
@@ -206,7 +209,7 @@
   }
 }
 
-/* === NEW FADE-IN WITH GLOW === */
+/* FADE-IN WITH GLOW */
 @keyframes fadeInUpGlow {
   0% {
     opacity: 0;
@@ -225,7 +228,7 @@
   animation: fadeInUpGlow 0.6s ease forwards;
 }
 
-/* STAT COUNT GLOW EFFECT */
+/* Stat Count */
 .glow-count {
   animation: pulseGlow 1s ease-in-out infinite alternate;
 }

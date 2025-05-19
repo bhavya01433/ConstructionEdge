@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./portfolioDetailed.css";
 
@@ -76,7 +75,7 @@ const Skyline = () => {
           <div className="zigzag-image">
             <img
               src="/images/gallery2.jpeg"
-              alt="Highlights Image"
+              alt="Highlights Skyline project "
               className="image"
             />
           </div>

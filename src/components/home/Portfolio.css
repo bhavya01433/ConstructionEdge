@@ -110,7 +110,6 @@
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(23, 26, 1, 0);
   margin-right: 16px;
 }
 
@@ -124,13 +123,13 @@
   object-fit: cover;
   display: block;
   filter: brightness(70%);
-  transition: filter 0.3 ease;
+  transition: filter 0.3s ease;
 }
 .scroll-card:hover img {
   filter: brightness(100%);
 }
 .swipe-indicator {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #aaa;
   margin-top: 10px;
   animation: blink 1.5s infinite;

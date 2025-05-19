@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import testimonialData from "../home/testimonialData";
 import "./Testimonial.css";
 
