@@ -75,7 +75,7 @@
 }
 
 .service-card:hover .learn-more-text {
-  color: #acbd7d;
+  color: #f1d1ac;
   transform: translateX(4px);
   text-shadow: 0 0 6px rgba(172, 185, 135, 0.5);
 }

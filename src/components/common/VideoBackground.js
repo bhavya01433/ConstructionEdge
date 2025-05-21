@@ -20,19 +20,16 @@ const VideoBackground = () => {
           <p>Construct Edge - Elevating Excellence in Construction</p>
           <div className="hero-cta-buttons">
             {/* Start Building With Us button */}
-            <button
-              className="hero-cta-btn"
-              onClick={() => scrollToSection("services")}
-            >
-              Let’s Build Something Great Together
+            <button className="btn" onClick={() => scrollToSection("services")}>
+              Let’s Build
             </button>
 
             {/* Explore Our Projects button */}
             <button
-              className="hero-cta-btn secondary"
+              className="btn"
               onClick={() => scrollToSection("portfolio")}
             >
-              See What We've Built
+              Explore
             </button>
           </div>
         </div>

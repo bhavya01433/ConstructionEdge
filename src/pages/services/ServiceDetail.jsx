@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import servicesData from "../../data/servicesData";
 import "./ServiceDetail.css";
@@ -76,7 +76,7 @@ const ServiceDetail = () => {
           >
             <h2>{service.cta.heading}</h2>
             <p>{service.cta.subtext}</p>
-            <button className="cta-btn">{service.cta.buttonText}</button>
+            <button className="btn">{service.cta.buttonText}</button>
           </section>
         )}
       </div>

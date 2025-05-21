@@ -116,7 +116,7 @@ const Skyline = () => {
       <section className="cta-section">
         <h2>Want to Build a Landmark Like Skyline?</h2>
         <p>Let's collaborate and turn your vision into a towering reality.</p>
-        <Link to="/" className="cta-button">
+        <Link to="/" className="btn">
           ← Back to Home
         </Link>
       </section>

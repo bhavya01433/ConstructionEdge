@@ -1,93 +1,134 @@
+/* === Testimonial Section Base === */
 .testimonial-section {
-  background: linear-gradient(135deg, #0a0a0a, #121212 80%);
-  padding: 6rem 3rem;
-  text-align: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 80px 0;
+  background-color: #0c0c0c;
+  overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .section-title {
-  font-size: 3.8rem;
-  font-weight: 900;
-  margin-bottom: 5rem;
-  letter-spacing: 0.12rem;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
   color: #e4d83f;
   text-shadow: 0 0 4px #e4d83f88, 0 0 8px #e4d83f66;
 }
 
-/*  Layout */
-.testimonial-grid {
-  column-count: 4;
-  column-gap: 2rem;
-  padding: 1rem 0;
+/* === Scrollable Row === */
+.testimonial-scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: visible;
+  width: 100%;
 }
 
-/* 🔧 Masonry-friendly cards */
+.testimonial-row {
+  width: 100%;
+  min-height: 340px;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.testimonial-track {
+  display: inline-flex;
+  animation: scrollLeft 50s linear infinite;
+  width: max-content;
+}
+
+.testimonial-row:nth-child(2) .testimonial-track {
+  animation: scrollRight 50s linear infinite;
+}
+
+/* === Card Base === */
 .testimonial-card {
   display: inline-block;
-  width: 100%;
-  margin-bottom: 2rem;
-  break-inside: avoid;
+  flex: 0 0 auto;
+  margin: 0 15px;
+  height: 350px;
+  min-width: 400px;
+  max-width: 580px;
   background: #181818;
-  border-radius: 1.4rem;
+  color: #e4d83f;
   padding: 2rem;
+  border-radius: 1.5rem;
   box-shadow: 0 10px 20px rgba(228, 216, 63, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.04);
-  color: #e4d83f;
-  font-size: 1.1rem;
-  min-height: 340px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  word-break: break-word;
   opacity: 0;
   transform: translateY(60px) scale(0.95);
+  word-break: break-word;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Scroll animation trigger */
 .testimonial-card.visible {
   opacity: 1;
-  transform: translateY(0px) scale(1);
-  animation: fadeInUp 3s ease forwards;
+  transform: translateY(0) scale(1);
   filter: drop-shadow(0 0 10px #e4d83f55);
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(228, 216, 63, 0.2),
+    0 0 20px rgba(228, 216, 63, 0.08);
+  z-index: 2;
 }
 
-/* Quote Card */
+.quote-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  background-color: #1a1a1a; /* dark bg just in case */
+  border-radius: 1rem;
+}
+
 .quote-card .quote {
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.6;
   font-size: 1.2rem;
-  flex-grow: 1;
-  margin-top: 5.5rem;
+  margin-bottom: 2.5rem;
+  color: #f5f5f5;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  padding: 0 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
+
+.quote-card .author {
+  font-weight: 700;
+  color: #e4d83f;
+  font-size: 1rem;
+  z-index: 2;
+}
+
 .quote-card::before {
   content: "“";
   position: absolute;
-  font-size: 8rem;
+  font-size: 6rem;
   color: rgba(228, 216, 63, 0.08);
   top: 1rem;
   left: 1rem;
   z-index: 0;
   pointer-events: none;
-}
-.quote-card .author {
-  font-weight: 700;
-  margin-top: 1.5rem;
-  color: #e4d83f;
-  font-size: 1rem;
+  line-height: 1;
 }
 
-/* Stat Card */
+/* === Stat Card === */
 .stat-card {
   display: flex;
   flex-direction: column;
@@ -115,7 +156,7 @@
   color: #d9d948cc;
 }
 
-/* Video Card */
+/* === Video Card === */
 .video-card iframe {
   width: 100%;
   height: 100%;
@@ -130,23 +171,16 @@
   color: #e4d83f;
 }
 
-/* Image Card */
-.image-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
+/* === Image Card === */
 .image-card img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 0 5px #e4d83f11;
-  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  margin-bottom: 1rem;
 }
 
-.caption {
+.image-card .caption {
   margin-top: 0.8rem;
   font-size: 1.1rem;
   color: #ccc;
@@ -154,7 +188,7 @@
   padding: 0 0.5rem;
 }
 
-/* Hidden Card */
+/* === Hidden Card === */
 .hidden-card {
   background: linear-gradient(135deg, #000000, #55543d);
   color: #222;
@@ -173,7 +207,7 @@
 }
 
 .hidden-card::before {
-  content: "🤫";
+  content: "🧢";
   font-size: 2rem;
   position: absolute;
   top: 1rem;
@@ -199,35 +233,36 @@
   opacity: 1;
 }
 
-/* Scroll Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(80px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* 🔧 Responsive Masonry */
-@media (max-width: 1024px) {
-  .testimonial-grid {
-    column-count: 2;
-  }
-}
-
+/* === Responsive Layout === */
 @media (max-width: 768px) {
-  .testimonial-grid {
-    column-count: 1;
-  }
-
   .testimonial-card {
+    min-width: 85vw;
     padding: 1.5rem;
   }
 
-  .image-card img {
-    height: 180px;
+  .testimonial-track {
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }

@@ -48,21 +48,6 @@
   font-size: 1.1rem;
   margin: 5px 0 15px;
 }
-/* Button */
-.view-btn {
-  background-color: var(--secondary);
-  color: #0d0d0d;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.view-btn:hover {
-  background-color: #fffec6c8;
-}
 
 .card-overlay {
   position: absolute;

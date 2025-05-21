@@ -102,10 +102,10 @@ const PortfolioDetail = () => {
 
       {/* CTA Section */}
       {project.cta && (
-        <section className="cta-section">
+        <section className=" cta-section">
           <h2>{project.cta.title}</h2>
           <p>{project.cta.text}</p>
-          <Link to="/" className="cta-button">
+          <Link to="/" className="btn">
             ← Back to Home
           </Link>
         </section>

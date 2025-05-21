@@ -28,7 +28,7 @@ const FeaturedProject = () => {
             <strong>Scope:</strong> Architecture + Project Management
           </li>
         </ul>
-        <Link to="/portfolio/skyline" className="view-project-btn">
+        <Link to="/portfolio/skyline" className="btn">
           View Full Project
         </Link>
       </div>

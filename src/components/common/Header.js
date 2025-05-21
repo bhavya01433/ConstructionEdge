@@ -40,7 +40,9 @@ const Header = () => {
           Testimonial
         </Link>
 
-        <button className="quote-btn">Request a Quote</button>
+        <Link to="/contact">
+          <button className="btn">Request a Quote</button>
+        </Link>
       </div>
 
       <div

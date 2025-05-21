@@ -64,58 +64,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Button */
-.view-project-btn {
-  display: inline-block;
-  background-color: #ffc107;
-  color: #000;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
-}
-
-.view-project-btn:hover {
-  background-color: transparent;
-  color: #ffc107;
-  border: 2px solid #ffc107;
-  box-shadow: 0 0 12px rgba(255, 193, 7, 0.4);
-}
-/* Shimmer overlay */
-.view-project-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  height: 100%;
-  width: 50%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-/* Animate on hover */
-.view-project-btn:hover::before {
-  animation: shimmer 0.9s ease-in-out forwards;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
-}
-
 /*  Responsive design */
 @media (max-width: 768px) {
   .featured-project {

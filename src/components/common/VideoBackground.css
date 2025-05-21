@@ -61,27 +61,13 @@
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.hero-cta-btn {
-  background-color: var(--secondary);
-  color: var(--bg-dark);
-  position: relative;
-  padding: 14px 32px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.hero-cta-btn:hover {
-  background-color: #d1d1e0;
-  color: #000;
-  box-shadow: 0 4px 15px #d1d1e0;
+.hero-cta-buttons .btn {
+  padding: 12px 32px; /* Bigger than global */
+  font-size: 1.1rem; /* Slightly larger text */
 }
 
 /* Smooth fade-in animation*/
@@ -101,10 +87,6 @@
   }
   .overlay-content p {
     font-size: 1.2rem;
-  }
-  .hero-cta-btn {
-    padding: 12px 24px;
-    font-size: 1rem;
   }
 }
 body {

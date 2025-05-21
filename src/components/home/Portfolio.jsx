@@ -39,7 +39,7 @@ const Portfolio = () => {
               <h4>{project.title}</h4>
               <p>{project.type}</p>
               <Link to={`/portfolio/${project.slug}`}>
-                <button className="view-btn">View Details</button>
+                <button className="btn">View Details</button>
               </Link>
             </div>
           </div>

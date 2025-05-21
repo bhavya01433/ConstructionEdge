@@ -1,8 +1,8 @@
 :root {
   --bg-dark: #0b0b0b;
   --surface-dark: #1e1e1e;
-  --primary: #9eff00;
-  --secondary: #ffd700;
+  --primary: hsl(83, 100%, 50%);
+  --secondary: #a58d00;
   --accent: #ffffff;
 
   --text-light: #e6e6e6;
@@ -71,22 +71,59 @@ p {
   margin-bottom: 1rem;
 }
 
-/* BUTTONS */
-/* button {
-  background-color: var(--primary);
-  border: none;
-  color: var(--bg-dark);
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  border-radius: 6px;
+/* Global Button Style */
+.btn {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-button:hover,
-button:focus {
-  background-color: var(--secondary);
-  outline: none;
-} */
+
+.btn:hover {
+  background-color: transparent;
+  color: #ffc107;
+  border: 2px solid #ffc107;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.4);
+}
+
+/* Shimmer overlay */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+/* Animate on hover */
+.btn:hover::before {
+  animation: shimmer 0.9s ease-in-out forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
 
 /* FORM ELEMENTS */
 input,

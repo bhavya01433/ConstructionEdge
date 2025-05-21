@@ -9,7 +9,7 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 1000px;
   overflow: hidden;
 }
 .banner-img {
@@ -17,6 +17,9 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.4);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .banner-overlay {
   position: absolute;
@@ -99,9 +102,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
-.offering-card:hover {
-  transform: translateY(-4px);
-}
+
 .offering-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -133,9 +134,6 @@
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-/* .gallery-grid img:hover {
-  transform: scale(1.05);
-} */
 
 /* CTA Section */
 .cta-section {
@@ -151,19 +149,6 @@
   color: var(--text-muted);
   font-size: 1.1rem;
   margin-bottom: 20px;
-}
-.cta-btn {
-  background-color: var(--secondary);
-  color: #000;
-  padding: 12px 28px;
-  border: none;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.cta-btn:hover {
-  background-color: #e2ff7f;
 }
 
 /* Responsive */
@@ -190,12 +175,12 @@
 
 .image-caption {
   margin-top: 8px;
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
+  color: #757474;
   text-align: center;
 }
 .cta-section {
-  min-height: 300px; /* or any value that suits your design */
+  min-height: 300px;
   background-size: cover;
   background-position: center;
 }

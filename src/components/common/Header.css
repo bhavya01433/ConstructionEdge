@@ -27,20 +27,7 @@
 .nav a:hover {
   color: var(--secondary);
 }
-.quote-btn {
-  padding: 10px 20px;
-  background-color: var(--secondary);
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.quote-btn:hover {
-  background-color: #ababb8;
-  box-shadow: 0 4px 15px #ababb8;
-}
+
 .logo {
   max-height: 160px;
   width: auto;

@@ -114,7 +114,7 @@
   transform: scale(1.03);
 }
 
-/* Back Button */
+/* Back section  */
 .cta-section {
   text-align: center;
   padding: 80px 20px 40px;
@@ -132,23 +132,6 @@
   font-size: 1.1rem;
   color: #d3d3d3;
   margin-bottom: 30px;
-}
-.cta-button {
-  color: var(--secondary);
-  background: transparent;
-  border: 1.5px solid var(--secondary);
-  padding: 14px 30px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.cta-button:hover {
-  background-color: var(--secondary);
-  color: #000;
 }
 
 /* Responsive */

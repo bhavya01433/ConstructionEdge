@@ -18,6 +18,9 @@ import ServiceDetail from "./pages/services/ServiceDetail";
 import PortfolioDetail from "./pages/portfolio/portfolioDetail";
 import Skyline from "./pages/portfolio/Skyline";
 
+//Contact Page
+import Contact from "./components/common/Contact";
+
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,6 +49,9 @@ function App() {
               <section id="testimonial">
                 <Testimonial />
               </section>
+              <section id="contact">
+                <Contact />
+              </section>
             </>
           }
         />
@@ -56,6 +62,8 @@ function App() {
         {/* Portfolio Detail Pages */}
         <Route path="/portfolio/skyline" element={<Skyline />} />
         <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
+        {/* Contact Page */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
