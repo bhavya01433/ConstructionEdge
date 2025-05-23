@@ -66,8 +66,8 @@
 }
 
 .hero-cta-buttons .btn {
-  padding: 12px 32px; /* Bigger than global */
-  font-size: 1.1rem; /* Slightly larger text */
+  padding: 12px 32px;
+  font-size: 1.1rem;
 }
 
 /* Smooth fade-in animation*/

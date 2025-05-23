@@ -82,7 +82,7 @@ function About() {
       <div className="about-content">
         <h2 className="about-title">Who We Are!</h2>
         <p className="about-text">
-          At <strong>ConstructEdge</strong>, we don’t just build structures — we
+          At <strong>ConstructEdge</strong>, we don't just build structures — we
           build legacies. With over <strong>8 years</strong> of hands-on
           experience, our team delivers cutting-edge construction solutions for
           commercial, residential, and interior projects.
