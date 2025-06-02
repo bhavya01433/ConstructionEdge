@@ -2,7 +2,7 @@
   --bg-dark: #0b0b0b;
   --surface-dark: #1e1e1e;
   --primary: hsl(83, 100%, 50%);
-  --secondary: #a58d00;
+  --secondary: #b19b22;
   --accent: #ffffff;
 
   --text-light: #e6e6e6;
@@ -74,7 +74,7 @@ p {
 /* Global Button Style */
 .btn {
   display: inline-block;
-  background-color: #ffc107;
+  background-color: #a38323;
   color: #000;
   padding: 12px 24px;
   text-decoration: none;
@@ -125,22 +125,6 @@ p {
   }
 }
 
-/* FORM ELEMENTS */
-input,
-select,
-textarea {
-  background-color: var(--surface-dark);
-  border: 1px solid var(--border-color);
-  color: var(--text-light);
-  padding: 0.6rem;
-  border-radius: 6px;
-  font-family: inherit;
-}
-input::placeholder,
-textarea::placeholder {
-  color: var(--text-muted);
-}
-
 /* SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
@@ -153,7 +137,9 @@ textarea::placeholder {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--secondary);
 }
-
+* {
+  scroll-behavior: smooth;
+}
 /* UTILITY CLASSES */
 .text-muted {
   color: var(--text-muted);

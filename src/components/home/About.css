@@ -10,7 +10,9 @@
   color: #fff;
   position: relative;
   z-index: 1;
-  padding: 4rem 2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  /* padding: 4rem 2rem; */
   overflow: hidden;
 }
 
@@ -36,6 +38,7 @@
   font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
+  margin-top: 40px;
   margin-bottom: 40px;
   color: #ffffff;
   letter-spacing: 1px;
@@ -117,7 +120,7 @@
   position: relative;
   z-index: 2;
   color: #fff;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
@@ -143,7 +146,7 @@
 
 .stats-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 70px;
   flex-wrap: wrap;
   row-gap: 50px;

@@ -23,12 +23,12 @@ const testimonialData = [
     content: `Their attention to detail made all the difference in our renovation.`,
     author: "Emily T., Homeowner",
   },
-  {
-    id: 5,
-    type: "stat",
-    number: "3x",
-    label: "Faster Project Delivery",
-  },
+  // {
+  //   id: 5,
+  //   type: "stat",
+  //   number: "3x",
+  //   label: "Faster Project Delivery",
+  // },
   {
     id: 6,
     type: "stat",

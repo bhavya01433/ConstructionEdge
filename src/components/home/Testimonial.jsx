@@ -1,13 +1,43 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import testimonialData from "../home/testimonialData";
 import "./Testimonial.css";
+
+const NUM_PAGINATION_DOTS = 6;
+const topRow = testimonialData.slice(0, 10);
+const bottomRow = testimonialData.slice(10, 20);
 
 const Testimonial = () => {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const topRow = testimonialData.slice(0, 10);
-  const bottomRow = testimonialData.slice(10, 20);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Track scroll position for pagination dots on mobile
+  useEffect(() => {
+    if (!isMobile || !topRef.current) return;
+    const handleScroll = () => {
+      const container = topRef.current;
+      const cardWidth = container.firstChild?.offsetWidth || 1;
+      const scrollLeft = container.scrollLeft;
+      // Calculate which dot should be active
+      const totalCards = topRow.length;
+      const maxIndex = totalCards - 1;
+      const visibleCards = NUM_PAGINATION_DOTS;
+      const maxScroll = cardWidth * (maxIndex - visibleCards + 1 + 0.5); // 0.5 for partial
+      let percent = Math.min(scrollLeft / maxScroll, 1);
+      let dotIndex = Math.round(percent * (visibleCards - 1));
+      setActiveIndex(dotIndex);
+    };
+    const container = topRef.current;
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, [isMobile]);
 
   // Scroll-triggered reveal animation
   useEffect(() => {
@@ -30,8 +60,9 @@ const Testimonial = () => {
     };
   }, []);
 
-  // Continuous scroll animation
+  // Continuous scroll animation (desktop only)
   useEffect(() => {
+    if (isMobile) return;
     let topX = 0;
     let bottomX = 0;
     const speed = 0.5;
@@ -55,7 +86,13 @@ const Testimonial = () => {
     };
 
     animate();
-  }, []);
+  }, [isMobile]);
+
+  function truncateText(text, maxChars = 180) {
+    if (!text) return '';
+    if (text.length <= maxChars) return text;
+    return text.slice(0, maxChars) + '...';
+  }
 
   const renderCard = (item) => {
     switch (item.type) {
@@ -64,6 +101,13 @@ const Testimonial = () => {
           <div className="testimonial-card quote-card">
             <p className="quote">“{item.content}”</p>
             <p className="author">- {item.author}</p>
+            <div className="stars">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="star">
+                  &#9733;
+                </span>
+              ))}
+            </div>
           </div>
         );
       case "stat":
@@ -113,27 +157,42 @@ const Testimonial = () => {
   return (
     <section className="testimonial-section">
       <h2 className="section-title">What Our Clients Say</h2>
-
       <div className="testimonial-scroll-wrapper">
         <div className="testimonial-row">
-          <div className="testimonial-track" ref={topRef}>
-            {[...topRow, ...topRow].map((item, index) => (
+          <div
+            className="testimonial-track"
+            ref={topRef}
+            style={isMobile ? { transform: "none" } : {}}
+          >
+            {[...topRow, ...(!isMobile ? topRow : [])].map((item, index) => (
               <div key={`top-${index}`} style={{ "--i": index }}>
                 {renderCard(item)}
               </div>
             ))}
           </div>
         </div>
-        <div className="testimonial-row">
-          <div className="testimonial-track" ref={bottomRef}>
-            {[...bottomRow, ...bottomRow].map((item, index) => (
-              <div key={`bottom-${index}`} style={{ "--i": index }}>
-                {renderCard(item)}
-              </div>
-            ))}
+        {!isMobile && (
+          <div className="testimonial-row">
+            <div className="testimonial-track" ref={bottomRef}>
+              {[...bottomRow, ...bottomRow].map((item, index) => (
+                <div key={`bottom-${index}`} style={{ "--i": index }}>
+                  {renderCard(item)}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
+      {isMobile && (
+        <div className="testimonial-pagination-dots pagination-below">
+          {Array.from({ length: NUM_PAGINATION_DOTS }).map((_, idx) => (
+            <span
+              key={idx}
+              className={"dot" + (activeIndex === idx ? " active" : "")}
+            ></span>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

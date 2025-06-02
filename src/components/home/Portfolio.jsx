@@ -1,38 +1,44 @@
 import { useEffect } from "react";
-import FeaturedProject from "../portfolio/FeaturedProject";
+import Masterpiece from "../portfolio/Masterpiece";
 import { Link } from "react-router-dom";
-import portfolioData from "../../data/portfolioData"; //
+import portfolioData from "../../data/portfolioData";
 import "./Portfolio.css";
 
 const Portfolio = () => {
   useEffect(() => {
     const container = document.getElementById("scrollContainer");
+    if (!container) return;
+
     let scrollAmount = 0;
+    const speed = 1;
 
-    const autoScroll = setInterval(() => {
-      if (container) {
-        scrollAmount += 1;
-        container.scrollLeft += 1;
+    const autoScroll = () => {
+      container.scrollLeft += speed;
+      scrollAmount += speed;
 
-        if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-          scrollAmount = 0;
-          container.scrollLeft = 0;
-        }
+      // Reset smoothly after scrolling through the first set
+      if (scrollAmount >= container.scrollWidth / 2) {
+        container.scrollLeft = 0;
+        scrollAmount = 0;
       }
-    }, 30);
 
-    return () => clearInterval(autoScroll);
+      requestAnimationFrame(autoScroll);
+    };
+
+    let animationId = requestAnimationFrame(autoScroll);
+    return () => cancelAnimationFrame(animationId);
   }, []);
+
+  const duplicatedData = [...portfolioData, ...portfolioData];
 
   return (
     <section className="portfolio-section">
-      <h2 className="portfolio-title">Our Featured Projects</h2>
+      {/* Featured Projects */}
+      <Masterpiece />
 
-      <FeaturedProject />
-
-      {/* Horizontal Scroll Project Showcase */}
+      {/* Horizontal Scroll Section */}
       <div id="scrollContainer" className="horizontal-scroll-container">
-        {portfolioData.map((project, index) => (
+        {duplicatedData.map((project, index) => (
           <div className="scroll-card" key={index}>
             <img src={project.img} alt={project.title} />
             <div className="card-overlay">
@@ -46,6 +52,7 @@ const Portfolio = () => {
         ))}
       </div>
 
+      {/* Mobile Hint */}
       <p className="swipe-indicator">← Swipe to explore →</p>
     </section>
   );

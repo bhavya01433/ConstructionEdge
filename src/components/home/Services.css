@@ -1,15 +1,17 @@
 .services-section {
   background-color: var(--bg-dark);
-  padding: 80px 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
   font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
-  scroll-behavior: smooth;
+  position: relative;
 }
 
 .services-container {
   display: flex;
   gap: 5rem;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
@@ -19,11 +21,11 @@
   position: sticky;
   top: 100px;
   align-self: flex-start;
-  padding: 30px;
+  /* padding: 20px; */
   height: fit-content;
   opacity: 0;
   transform: translateX(-50px);
-  animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideInLeft 5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .services-heading-content {
@@ -38,7 +40,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: float 6s ease-in-out infinite;
 }
 
 .services-heading-content::before {
@@ -82,7 +83,6 @@
   color: #ffffff;
   line-height: 1.8;
   font-weight: 300;
-  animation: fadeInUp 1s ease-out;
 }
 
 /* RIGHT: Scroll Cards */
@@ -113,6 +113,8 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card.in-view {
@@ -123,9 +125,8 @@
 
 /* Card Hover Effect */
 .service-card:hover {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: rgba(247, 247, 45, 0.387) 0px 20px 25px,
-    rgba(135, 134, 134, 0.22) 0px 15px 15px;
+  transform: translateY(-5px) scale(1.03);
+  /* box-shadow: 0 8px 32px rgba(80, 80, 80, 0.15); */
   background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
 }
 
@@ -151,7 +152,7 @@
 }
 
 .feature-tag {
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(114, 101, 26, 0.1);
   color: var(--secondary);
   padding: 6px 12px;
   border-radius: 20px;
@@ -159,12 +160,6 @@
   font-weight: 500;
   border: 1px solid rgba(255, 215, 0, 0.2);
   transition: all 0.3s ease;
-}
-
-.service-card:hover .feature-tag {
-  background: rgba(255, 215, 0, 0.15);
-  border-color: rgba(255, 215, 0, 0.3);
-  transform: translateY(-2px);
 }
 
 /* Learn More */
@@ -186,13 +181,14 @@
 
 /* Icon Container */
 .icon-container {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   position: relative;
 }
 
 .icon-container svg {
   position: relative;
   z-index: 1;
+
   transition: all 0.4s ease;
   width: 50px;
   height: 50px;
@@ -200,7 +196,7 @@
 
 .service-card:hover .icon-container svg {
   transform: scale(1.2) rotate(5deg);
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+  filter: drop-shadow(0 0 8px rgba(118, 111, 71, 0.4));
 }
 
 /* Animations */
@@ -212,16 +208,6 @@
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 
@@ -250,18 +236,8 @@
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 0.95;
-    transform: translateY(0);
-  }
-}
+/* Responsive Design */
 
-/* Responsive */
 @media (max-width: 1200px) {
   .services-container {
     gap: 3rem;
@@ -274,44 +250,253 @@
   .service-card {
     margin: 0 15px;
   }
+
+  .service-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-item {
+    justify-content: flex-start;
+  }
+
+  .process-step {
+    padding: 6px 10px;
+  }
 }
 
 @media (max-width: 768px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+
   .services-container {
     flex-direction: column;
   }
 
-  .services-left,
-  .services-right {
-    width: 100%;
+  .services-left {
+    position: relative;
+    top: 0;
+    padding: 0;
+    margin-bottom: 40px;
   }
 
   .services-heading-content {
-    padding: 60px 30px;
-    min-height: 400px;
+    padding: 40px 25px;
+    margin-bottom: 30px;
+  }
+
+  .services-heading-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .services-description,
+  .learn-more-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
   }
 
   .services-right {
-    gap: 40px;
+    gap: 30px;
+    padding: 0;
   }
 
   .service-card {
-    min-height: 300px;
-    padding: 35px 25px;
+    padding: 30px 20px;
+    margin: 0;
+    min-height: auto;
   }
 
   .service-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 15px 0 10px;
   }
 
   .service-card p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .feature-tag {
     font-size: 0.85rem;
     padding: 5px 10px;
   }
+
+  .service-stats {
+    padding: 12px;
+    margin: 15px 0;
+  }
+
+  .stat-item {
+    font-size: 0.85rem;
+  }
+
+  .process-step {
+    padding: 6px 8px;
+  }
+
+  .step-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .services-heading-title {
+    font-size: 3.5rem;
+  }
+
+  .services-description,
+  .learn-more-text {
+    font-size: 1.5rem;
+  }
+
+  .service-card {
+    padding: 25px 15px;
+  }
+
+  .service-features {
+    gap: 8px;
+  }
+
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .service-stats {
+    padding: 10px;
+  }
+
+  .stat-item {
+    font-size: 0.8rem;
+  }
+
+  .process-step {
+    padding: 5px 6px;
+  }
+}
+
+/* Service Stats */
+.service-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 215, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stat-item svg {
+  opacity: 0.8;
+}
+
+/* Service Process */
+.service-process {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .process-step {
+  background: rgba(255, 215, 0, 0.05);
+  transform: translateX(1px);
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  color: #1a1a1a;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.step-text {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+/* Enhanced Card Hover Effects */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(119, 112, 74, 0.15),
+    rgba(109, 103, 67, 0.05),
+    rgba(124, 115, 61, 0.15)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Active Card State */
+/* .service-card.active {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: rgba(247, 247, 45, 0.387) 0px 20px 25px,
+    rgba(135, 134, 134, 0.22) 0px 15px 15px;
+  background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.service-card.active .icon-container svg {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+}
+
+.service-card.active .feature-tag {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.service-card.active .process-step {
+  background: rgba(255, 215, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.service-card.active .learn-more-text {
+  color: #f1d1ac;
+  transform: translateX(8px);
+  text-shadow: 0 0 8px rgba(172, 185, 135, 0.6);
+} */
