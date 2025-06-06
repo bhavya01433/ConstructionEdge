@@ -33,9 +33,9 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio-section">
-      {/* Featured Projects */}
+      <div className="portfolio-heading">Portfolio</div>
       <Masterpiece />
-
+      <h3 className="explore-more">Explore More Projects</h3>
       {/* Horizontal Scroll Section */}
       <div id="scrollContainer" className="horizontal-scroll-container">
         {duplicatedData.map((project, index) => (
@@ -51,7 +51,6 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-
       {/* Mobile Hint */}
       <p className="swipe-indicator">← Swipe to explore →</p>
     </section>

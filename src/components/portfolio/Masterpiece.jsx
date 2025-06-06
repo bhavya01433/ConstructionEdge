@@ -24,13 +24,13 @@ const Masterpiece = () => {
     );
 
     // Zoom image
-    const scale = 1 + scrollProgress * 5.5;
+    const scale = scrollProgress * 1;
     image.style.transform = `scale(${scale})`;
 
     // Fade out title when scrolling down, fade in when scrolling up
-    const titleThreshold = 0.9;
-    const isScrollingDown = window.scrollY > window.lastScrollY;
-    setTitleHidden(isScrollingDown && scrollProgress > titleThreshold);
+    // const titleThreshold = 0.9;
+    // const isScrollingDown = window.scrollY > window.lastScrollY;
+    // setTitleHidden(isScrollingDown && scrollProgress > titleThreshold);
 
     // Fade in content after zoom
     setContentVisible(scrollProgress > 0.35);
@@ -83,7 +83,7 @@ const Masterpiece = () => {
             </div>
           </div>
 
-          <Link to="/skyline" className="btn">
+          <Link to="portfolio/MasterpieceDetail" className="btn">
             View Full Project Details
             <span className="arrow">→</span>
           </Link>

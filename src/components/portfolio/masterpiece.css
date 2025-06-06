@@ -4,9 +4,11 @@
   overflow-x: hidden;
   padding-left: 10%;
   padding-right: 10%;
+  overflow: hidden;
 }
 
 .masterpiece-title-wrapper {
+  position: relative;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -28,19 +30,20 @@
   opacity: 1;
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
 }
 
 .title-image {
-  width: 280px;
-  height: 120px;
+  position: absolute;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 20px;
   margin: 2rem 0;
   box-shadow: 0 25px 60px rgba(255, 255, 255, 0.25);
-  transform: scale(1);
   transition: none;
   will-change: transform;
+  transform: scale(0.01);
+  filter: brightness(70%);
 }
 
 .masterpiece-content {
@@ -56,7 +59,7 @@
   border-radius: 20px;
   backdrop-filter: blur(2.5rem);
   background-color: #0000007a;
-  margin-top: 150px;
+  margin-top: 500px;
 }
 
 .masterpiece-content.visible {
@@ -122,8 +125,8 @@
   }
 
   .title-image {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
   }
 
   .masterpiece-content {

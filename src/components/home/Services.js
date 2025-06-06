@@ -6,9 +6,6 @@ import {
   Ruler,
   ClipboardList,
   ArrowRight,
-  Clock,
-  Users,
-  Award,
 } from "lucide-react";
 import "./Services.css";
 import { Link } from "react-router-dom";
@@ -26,11 +23,7 @@ const services = [
       "Sustainable Planning",
     ],
     link: "/services/architecture",
-    stats: {
-      projects: "200+",
-      experience: "15+ Years",
-      team: "25+ Experts",
-    },
+  
     process: [
       "Initial Consultation",
       "Concept Development",
@@ -45,11 +38,6 @@ const services = [
       "Transforming structures with modern, functional upgrades. We breathe new life into existing spaces while maintaining their character and improving functionality.",
     features: ["Structural Upgrades", "Modern Amenities", "Energy Efficiency"],
     link: "/services/renovation",
-    stats: {
-      projects: "150+",
-      experience: "12+ Years",
-      team: "20+ Experts",
-    },
     process: [
       "Site Assessment",
       "Design Planning",
@@ -64,11 +52,6 @@ const services = [
       "Creating elegant, functional interiors that reflect your personality. Our designs blend aesthetics with practicality to create spaces you'll love living in.",
     features: ["Custom Furnishings", "Color Schemes", "Lighting Design"],
     link: "/services/interior",
-    stats: {
-      projects: "300+",
-      experience: "10+ Years",
-      team: "15+ Experts",
-    },
     process: [
       "Style Assessment",
       "Space Planning",
@@ -83,11 +66,6 @@ const services = [
       "Building beautiful, lasting homes from foundation to finish. We combine quality materials with expert craftsmanship to create your dream home.",
     features: ["Quality Materials", "Expert Craftsmanship", "Timely Delivery"],
     link: "/services/residential",
-    stats: {
-      projects: "100+",
-      experience: "20+ Years",
-      team: "30+ Experts",
-    },
     process: [
       "Site Preparation",
       "Foundation Work",
@@ -106,11 +84,6 @@ const services = [
       "Future-Proof Design",
     ],
     link: "/services/commercial",
-    stats: {
-      projects: "80+",
-      experience: "18+ Years",
-      team: "35+ Experts",
-    },
     process: [
       "Business Analysis",
       "Design Development",
@@ -125,11 +98,6 @@ const services = [
       "Streamlining timelines and budgets for efficient project delivery. Our experienced team ensures your project stays on track and within budget.",
     features: ["Timeline Management", "Budget Control", "Quality Assurance"],
     link: "/services/project",
-    stats: {
-      projects: "250+",
-      experience: "15+ Years",
-      team: "40+ Experts",
-    },
     process: [
       "Project Planning",
       "Resource Allocation",
@@ -138,23 +106,6 @@ const services = [
     ],
   },
 ];
-
-const ServiceStats = ({ stats }) => (
-  <div className="service-stats">
-    <div className="stat-item">
-      <Users size={20} />
-      <span>{stats.team}</span>
-    </div>
-    <div className="stat-item">
-      <Award size={20} />
-      <span>{stats.experience}</span>
-    </div>
-    <div className="stat-item">
-      <Clock size={20} />
-      <span>{stats.projects}</span>
-    </div>
-  </div>
-);
 
 const Services = () => {
   const cardsRef = useRef([]);
@@ -216,7 +167,6 @@ const Services = () => {
                   </span>
                 ))}
               </div>
-              <ServiceStats stats={service.stats} />
               <div className="service-process">
                 {service.process.map((step, idx) => (
                   <div key={idx} className="process-step">

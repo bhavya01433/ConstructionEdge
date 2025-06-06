@@ -88,11 +88,11 @@ const Testimonial = () => {
     animate();
   }, [isMobile]);
 
-  function truncateText(text, maxChars = 180) {
-    if (!text) return '';
-    if (text.length <= maxChars) return text;
-    return text.slice(0, maxChars) + '...';
-  }
+  // function truncateText(text, maxChars = 180) {
+  //   if (!text) return '';
+  //   if (text.length <= maxChars) return text;
+  //   return text.slice(0, maxChars) + '...';
+  // }
 
   const renderCard = (item) => {
     switch (item.type) {

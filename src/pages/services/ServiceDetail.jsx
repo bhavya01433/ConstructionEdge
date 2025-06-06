@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { useParams, useNavigate } from "react-router-dom";
 import servicesData from "../../data/servicesData";
 import "./ServiceDetail.css";
@@ -76,7 +77,9 @@ const ServiceDetail = () => {
           >
             <h2>{service.cta.heading}</h2>
             <p>{service.cta.subtext}</p>
-            <button className="btn">{service.cta.buttonText}</button>
+            <Link to="/contact">
+              <button className="btn">{service.cta.buttonText}</button>
+            </Link>
           </section>
         )}
       </div>

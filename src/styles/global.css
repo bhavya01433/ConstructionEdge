@@ -1,6 +1,6 @@
 :root {
   --bg-dark: #0b0b0b;
-  --surface-dark: #1e1e1e;
+  --surface-dark: #151515;
   --primary: hsl(83, 100%, 50%);
   --secondary: #b19b22;
   --accent: #ffffff;
@@ -153,6 +153,27 @@ p {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  background-color: #504f4f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #fbf305;
+  color: #000;
 }
 
 /* MEDIA QUERIES */
