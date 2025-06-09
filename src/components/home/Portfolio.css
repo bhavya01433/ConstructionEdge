@@ -99,9 +99,6 @@
   animation: blink 1.5s infinite;
   display: none;
 }
-/* .view-btn {
-  padding: 20px 18px;
-} */
 
 @media (max-width: 768px) {
   .scroll-card:active .card-overlay {
@@ -111,9 +108,9 @@
     display: block;
   }
 }
-.portfolio-heading {
+/* .portfolio-heading {
   margin-top: 10%;
-}
+} */
 
 @keyframes blink {
   0%,
