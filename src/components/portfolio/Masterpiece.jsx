@@ -83,7 +83,7 @@ const Masterpiece = () => {
             </div>
           </div>
 
-          <Link to="portfolio/MasterpieceDetail" className="btn">
+          <Link to="portfolio/MasterpieceDetail" className="btn featured-btn">
             View Full Project Details
             <span className="arrow">→</span>
           </Link>

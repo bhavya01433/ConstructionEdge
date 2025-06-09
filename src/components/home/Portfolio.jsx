@@ -33,9 +33,13 @@ const Portfolio = () => {
 
   return (
     <section className="portfolio-section">
-      <div className="portfolio-heading">Portfolio</div>
       <Masterpiece />
-      <h3 className="explore-more">Explore More Projects</h3>
+      <h3 className="portfolio-heading">Portfolio</h3>
+      <p className="portfolio-desc">
+        A showcase of purposeful design and expert craftsmanship. <br />
+        Where vision becomes structure — and ideas become icons.
+      </p>
+
       {/* Horizontal Scroll Section */}
       <div id="scrollContainer" className="horizontal-scroll-container">
         {duplicatedData.map((project, index) => (
@@ -45,7 +49,7 @@ const Portfolio = () => {
               <h4>{project.title}</h4>
               <p>{project.type}</p>
               <Link to={`/portfolio/${project.slug}`}>
-                <button className="btn">View Details</button>
+                <button className="btn view-btn">View Details</button>
               </Link>
             </div>
           </div>

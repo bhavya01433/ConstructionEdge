@@ -52,7 +52,6 @@ function App() {
                 <Testimonial />
               </section>
               <ContactTeaser />
-              <Footer />
             </>
           }
         />
@@ -66,10 +65,11 @@ function App() {
           element={<MasterpieceDetail />}
         />
         <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
-
         {/* Contact Page */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </Router>
   );
 }

@@ -15,10 +15,11 @@
   align-items: center;
   justify-content: flex-start;
   z-index: 10;
+  width: 100%;
 }
 
 .masterpiece-title {
-  font-size: 10rem;
+  font-size: 9rem;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   color: #fff;
@@ -94,13 +95,14 @@
   max-width: 700px;
   margin: 0 auto 2rem;
 }
+
 .tag-grid {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   gap: 1rem 2rem;
   justify-content: center;
   align-items: start;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .tag {
@@ -115,18 +117,18 @@
     0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
 }
-.btn {
-  margin-bottom: 20px;
+.featured-btn {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
   .masterpiece-title {
-    font-size: 3.3rem;
+    font-size: 2.7rem;
   }
 
   .title-image {
     width: auto;
-    height: auto;
+    height: 70vh;
   }
 
   .masterpiece-content {
@@ -142,7 +144,7 @@
     justify-content: center;
   }
 
-  .view-details-btn {
+  .featured-btn {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }

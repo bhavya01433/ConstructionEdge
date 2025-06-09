@@ -127,7 +127,6 @@ const Contact = () => {
 
           <div className="map-container">
             <h3>Find Us on Map</h3>
-            {/* Replace with your actual Google Maps embed iframe */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117500.00000000001!2d72.5000000!3d23.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848ae0d7831f%3A0x6b8f3b7f6c7c2b5e!2sAhmedabad%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%"
@@ -142,17 +141,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Optional: Testimonial Snippet */}
-      <section className="contact-testimonial">
-        <blockquote>
-          "Their team was incredibly responsive and helpful throughout our
-          entire project. Communication was seamless!"
-          <cite>- Elon Musk</cite>
-        </blockquote>
-      </section>
     </div>
   );
 };
 
 export default Contact;
+

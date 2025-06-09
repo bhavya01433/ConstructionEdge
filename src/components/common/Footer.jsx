@@ -1,52 +1,148 @@
-import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email) {
+      setEmailError("Email is required");
+      return;
+    }
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email");
+      return;
+    }
+    // Handle subscription logic here
+    console.log("Subscribing email:", email);
+    setEmail("");
+    setEmailError("");
+  };
+
   return (
-    <footer className="footer-container">
-      <div className="footer-top">
-        <div className="footer-brand">
-          <h2>Construct Edge</h2>
-          <p>Built with trust. Measured by mastery.</p>
-        </div>
-        <div className="footer-links">
-          <div className="footer-column">
-            <h4>Explore</h4>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/portfolio">Portfolio</a>
-            <a href="/contact">Contact</a>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section">
+          <div className="logo-section">
+            <img
+              src="images/tmc.png"
+              alt="Company Logo"
+              className="footer-logo"
+            />
+            <p className="company-description">
+              Building excellence through innovation and dedication.
+            </p>
           </div>
-          <div className="footer-column">
-            <h4>Contact</h4>
+        </div>
+
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <nav className="footer-nav">
+            <ul>
+              <li>
+                <Link to="/#about">About us</Link>
+              </li>
+              <li>
+                <Link to="/#services">Services</Link>
+              </li>
+              <li>
+                <Link to="/#portfolio">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div className="footer-section">
+          <h3>Contact Info</h3>
+          <div className="contact-info">
             <p>
-              Email:{" "}
+              <FaEnvelope />{" "}
               <a href="mailto:info@constructedge.com">info@constructedge.com</a>
             </p>
             <p>
-              Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+              <FaPhone /> <a href="tel:+911234567890">+91 12345 67890</a>
             </p>
-            <p>Location: Ahemdabad, India</p>
+            <p>
+              <FaMapMarkerAlt /> 123 Construction Road, Ahmedabad, Gujarat,
+              India - 380001
+            </p>
           </div>
+        </div>
+
+        <div className="footer-section">
+          <h3>Newsletter</h3>
+          <form onSubmit={handleSubscribe} className="newsletter-form">
+            <div className="input-group">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setEmailError("");
+                }}
+                placeholder="Enter your email"
+                aria-label="Email for newsletter"
+              />
+              <button type="submit">Subscribe</button>
+            </div>
+            {emailError && <span className="error-message">{emailError}</span>}
+          </form>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <div className="social-icons">
-          <a href="#">
+        <div className="social-links">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             <FaLinkedin />
           </a>
-          <a href="#">
-            <FaInstagram />
-          </a>
-          <a href="#">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
             <FaTwitter />
           </a>
-          <a href="#">
-            <FaFacebook />
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
           </a>
         </div>
-        <p>© 2025 Construct Edge. All rights reserved.</p>
+        <div className="footer-legal">
+          <p>
+            &copy; {new Date().getFullYear()} Construct Edge . All rights
+            reserved.
+          </p>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
       </div>
     </footer>
   );

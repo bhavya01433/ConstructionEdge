@@ -43,6 +43,7 @@
   color: #ffffff;
   letter-spacing: 1px;
   position: relative;
+  font-family: "Playfair Display", serif;
 }
 
 .about-title::after {
