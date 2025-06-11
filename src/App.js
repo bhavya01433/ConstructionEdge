@@ -11,7 +11,7 @@ import About from "./components/home/About";
 import Services from "./components/home/Services";
 import Portfolio from "./components/home/Portfolio";
 import Testimonial from "./components/home/Testimonial";
-import ContactTeaser from "./components/common/ContactTeaser";
+import ContactTeaser from "./components/home/ContactTeaser";
 
 // Service Detail Pages
 import ServiceDetail from "./pages/services/ServiceDetail";

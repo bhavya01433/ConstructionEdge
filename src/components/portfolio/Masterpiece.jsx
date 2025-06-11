@@ -6,7 +6,6 @@ const Masterpiece = () => {
   const sectionRef = useRef(null);
   const imageRef = useRef(null);
   const contentRef = useRef(null);
-  const [titleHidden, setTitleHidden] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
   const handleScroll = () => {
@@ -27,16 +26,8 @@ const Masterpiece = () => {
     const scale = scrollProgress * 1;
     image.style.transform = `scale(${scale})`;
 
-    // Fade out title when scrolling down, fade in when scrolling up
-    // const titleThreshold = 0.9;
-    // const isScrollingDown = window.scrollY > window.lastScrollY;
-    // setTitleHidden(isScrollingDown && scrollProgress > titleThreshold);
-
     // Fade in content after zoom
     setContentVisible(scrollProgress > 0.35);
-
-    // Store current scroll position for next comparison
-    window.lastScrollY = window.scrollY;
   };
 
   useEffect(() => {
@@ -47,7 +38,7 @@ const Masterpiece = () => {
   return (
     <div className="masterpiece-section" ref={sectionRef}>
       <div className="masterpiece-title-wrapper">
-        <div className={`masterpiece-title ${titleHidden ? "hidden" : ""}`}>
+        <div className="masterpiece-title">
           <span>MASTER</span>
           <span>PIECE</span>
         </div>

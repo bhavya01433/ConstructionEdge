@@ -34,3 +34,33 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 768px) {
+  .contact-teaser {
+    height: auto;
+    padding: 4rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-teaser-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .contact-teaser-overlay {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .contact-teaser-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .contact-teaser-overlay p {
+    font-size: 1rem;
+  }
+}

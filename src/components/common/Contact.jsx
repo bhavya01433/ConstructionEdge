@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,11 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+  const [activeFAQ, setActiveFAQ] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveFAQ(activeFAQ === index ? null : index);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,12 +23,32 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you shortly.");
+
+    // Trigger toast
+    toast.success("Thanks for reaching out! We'll get back to you soon.", {
+      className: "custom-toast",
+      icon: "📩",
+      duration: 4000,
+    });
+
+    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
     <div className="contact-page">
+      {/* Toaster for global notifications */}
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 5000,
+          style: {
+            background: "#141414",
+            color: "#f0f0f0",
+          },
+        }}
+      />
+
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="hero-overlay"></div>
@@ -137,13 +163,44 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Our Location"
             ></iframe>
-            <p className="map-note"></p>
           </div>
         </div>
+        <div className="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  {[
+    {
+      question: "What services do you offer?",
+      answer: "We specialize in architectural planning, structural engineering, interior design, and full-scale construction project management.",
+    },
+    {
+      question: "How long does a project usually take?",
+      answer: "It depends on the size and scope. Small renovations take weeks; full builds can take months. We always keep you updated.",
+    },
+    {
+      question: "Do you provide quotes or consultations?",
+      answer: "Absolutely. Reach out via the form or call us directly—we'll set up a free consultation and provide a tailored quote.",
+    },
+  ].map((faq, index) => (
+    <div
+      className={`faq-item ${activeFAQ === index ? "active" : ""}`}
+      key={index}
+    >
+      <button
+        className="faq-question"
+        onClick={() => toggleFAQ(index)}
+      >
+        {faq.question}
+      </button>
+      <div className="faq-answer">
+        <p>{faq.answer}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </section>
     </div>
   );
 };
 
 export default Contact;
-

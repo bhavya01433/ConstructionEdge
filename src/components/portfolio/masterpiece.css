@@ -1,6 +1,6 @@
 .masterpiece-section {
   position: relative;
-  height: 150vh;
+  height: 140vh;
   overflow-x: hidden;
   padding-left: 10%;
   padding-right: 10%;
@@ -60,7 +60,8 @@
   border-radius: 20px;
   backdrop-filter: blur(2.5rem);
   background-color: #0000007a;
-  margin-top: 500px;
+  margin-top: 400px;
+  padding: 20px;
 }
 
 .masterpiece-content.visible {

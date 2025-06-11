@@ -12,7 +12,6 @@
   font-size: 3rem;
   color: #f5f5f5;
   text-align: center;
-  /* text-transform: uppercase; */
   letter-spacing: 0.1em;
   font-weight: 700;
   background: linear-gradient(to right, #f5e2a9, #a38323);
@@ -21,7 +20,15 @@
   -webkit-text-fill-color: transparent;
   opacity: 1;
 }
-
+/* .portfolio-heading::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 16px auto 0;
+  border-radius: 2px;
+  display: block;
+} */
 .portfolio-desc {
   font-size: 1.3rem;
   margin-top: 10px;
@@ -108,9 +115,6 @@
     display: block;
   }
 }
-/* .portfolio-heading {
-  margin-top: 10%;
-} */
 
 @keyframes blink {
   0%,

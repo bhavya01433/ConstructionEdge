@@ -18,7 +18,6 @@ const Header = () => {
           />
         </Link>
       </div>
-
       <div className={`nav ${menuOpen ? "active" : ""}`}>
         <Link to="/" onClick={toggleMenu}>
           Home
